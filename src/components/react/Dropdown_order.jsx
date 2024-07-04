@@ -13,8 +13,7 @@ const Dropdown_order= ()=> {
     <Dropdown>
       <DropdownTrigger>
         <Button 
-          className="capitalize"
-          color="danger"
+          className="capitalize bg-primary_2 text-white"
         >
           {selectedValue}
         </Button>

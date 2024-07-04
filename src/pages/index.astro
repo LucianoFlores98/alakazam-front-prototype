@@ -3,14 +3,12 @@ import '../styles.css';
 import Layout from '../layouts/Layout.astro';
 import Card_property from '../components/Card_property.astro';
 import NavbarTop from '../components/Navbar_top.astro';
-import { Button, Divider } from '@nextui-org/react';
 import NavbarButtom from '../components/Navbar_buttom.astro';
 
 ---
 
 <Layout title="Alakazam">
 	<NavbarTop></NavbarTop>
-	<Divider className='z-20' />
 	<NavbarButtom></NavbarButtom>
 	<div class="flex flex-wrap w-auto h-auto ml-10 mt-10 ">
 			<Card_property></Card_property>
@@ -23,8 +21,6 @@ import NavbarButtom from '../components/Navbar_buttom.astro';
 			<Card_property></Card_property>
 	</div>
 	
-	<Button color="primary" client:visible>My button</Button>
-
 </Layout>
 
 <style>

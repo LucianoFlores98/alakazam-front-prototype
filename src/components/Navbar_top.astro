@@ -1,13 +1,12 @@
 ---
-import { Badge, Divider } from "@nextui-org/react";
+import { Divider } from "@nextui-org/react";
 import Search from "./Search.astro";
 import Notification from "./react/Notifications";
-import { Icon } from "astro-icon/components";
 ---
 
 <!-- component -->
 <nav
-  class="w-full flex flex-wrap sticky top-0 z-20 justify-between items-center mx-auto h-20 text-neutral-800 px-8 bg-slate-50 "
+  class="w-full flex flex-wrap sticky top-0 z-20 justify-between items-center mx-auto h-20 text-neutral-800 px-8 bg-slate-50 border-b border-b-divider"
 >
 
     <!-- logo -->
@@ -21,7 +20,7 @@ import { Icon } from "astro-icon/components";
           />
         </div>
         <div class="leading-3">
-          <h1 class="font-bold text-xl" style="font-family: 'Open sans'; color:#FF6868">Alakazam</h1>
+          <h1 class="font-bold text-xl text-primary_2" style="font-family: 'Open sans';">Alakazam</h1>
           <h2 class="text-sm w-full text-nowrap text-gray-700/80 font-normal">
             Alquileres e inmuebles
           </h2>
@@ -53,9 +52,7 @@ import { Icon } from "astro-icon/components";
 
       <Divider orientation="vertical" />
 
-      <Badge color="danger" content={5} shape="circle">
-        <Icon name="notifications_40dp" class="text-2xl mr-2 ml-3"/>
-      </Badge>
+      <Notification client:visible />
 
       <div class="block ml-3">
         <div class="inline relative">

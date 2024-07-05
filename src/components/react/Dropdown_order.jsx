@@ -13,8 +13,8 @@ const Dropdown_order= ()=> {
     <Dropdown>
       <DropdownTrigger>
         <Button 
-          className="capitalize bg-primary_2 text-white"
-        >
+          className="capitalize bg-primary_2/80 text-white py-0"
+        > <span className="mr-1">Ordenar por:</span>
           {selectedValue}
         </Button>
       </DropdownTrigger>

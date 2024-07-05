@@ -17,16 +17,15 @@ const Notification = () => {
     <Dropdown>
       <DropdownTrigger>
         <Button
-          radius="full"
+          radius="large"
           isIconOnly
           aria-label="more than 99 notifications"
           variant="light"
           client:visible
-          className="text-2xl ml-2"
+          className="text-2xl ml-2 overflow-visible"
         >
-          <Badge content={5} shape="circle" className="bg-primary text-light">
-            <NotificationIcon />
-          </Badge>
+          <NotificationIcon  className="text-dark" />
+          <Badge content={5} shape="circle" className="bg-primary text-light -top-2 right-0" />
         </Button>
       </DropdownTrigger>
 

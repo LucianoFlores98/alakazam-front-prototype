@@ -14,7 +14,24 @@ const Dropdown_user = () => {
       }}
     >
       <DropdownTrigger>
-        <Button variant="ghost" disableRipple>Open Menu</Button>
+        <button
+              type="button"
+              class="inline-flex items-center relative px-1 border rounded-full hover:shadow-lg"
+            >
+              <div class="pl-1">
+                <PlusIcon className="text-large" />
+              </div>
+
+              <div class="block flex-grow-0 flex-shrink-0 h-10 w-12 pl-4 py-1">
+                <div class="rounded-full h-full w-full">
+                  <img
+                    src="/img/profile.png"
+                    alt="Mariano"
+                    class="rounded-full h-full w-full"
+                  />
+                </div>
+              </div>
+        </button>
       </DropdownTrigger>
 
       <DropdownMenu
@@ -42,34 +59,30 @@ const Dropdown_user = () => {
             className="h-14 gap-2 opacity-100"
           >
             <User
-              name="Junior Garcia"
-              description="@jrgarciadev"
+              name="Marianela Atorranta"
+              description="@marybb69"
               classNames={{
                 name: "text-default-600",
                 description: "text-default-500",
               }}
               avatarProps={{
                 size: "sm",
-                src: "https://avatars.githubusercontent.com/u/30373425?v=4",
+                src: "/img/profile.png",
               }}
             />
           </DropdownItem>
           <DropdownItem key="dashboard">
-            Dashboard
+            Mi perfil
           </DropdownItem>
-          <DropdownItem key="settings">Settings</DropdownItem>
+          <DropdownItem key="settings">Mis Favoritos</DropdownItem>
           <DropdownItem
             key="new_project"
-            endContent={<PlusIcon className="text-large" />}
           >
-            New Project
+            Mis publicaciones
           </DropdownItem>
         </DropdownSection>
 
         <DropdownSection aria-label="Preferences" showDivider>
-          <DropdownItem key="quick_search" shortcut="⌘K">
-            Quick search
-          </DropdownItem>
           <DropdownItem
             isReadOnly
             key="theme"
@@ -86,15 +99,15 @@ const Dropdown_user = () => {
               </select>
             }
           >
-            Theme
+            Tema
           </DropdownItem>
         </DropdownSection>  
 
         <DropdownSection aria-label="Help & Feedback">
           <DropdownItem key="help_and_feedback">
-            Help & Feedback
+            Ayuda
           </DropdownItem>
-          <DropdownItem key="logout">Log Out</DropdownItem>
+          <DropdownItem key="logout">Cerrar Sesión</DropdownItem>
         </DropdownSection> 
       </DropdownMenu>
 

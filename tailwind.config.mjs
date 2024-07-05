@@ -8,13 +8,19 @@ export default {
 		extend: {
 			colors: {
 				'primary': '#FF914C',
-				'primary_2': '#DD5D5C',
+				'primary_2': '#eb4d4b',
 				'secondary': '#999999',
-				'success': 'rgb(34 197 94 / var(--tw-bg-opacity))',
+				'success': '#1E8449',
 				'danger': '#df2234',
 				'warning': '#ffc107',
 				'info': '#2086FF',
 				'light': '#ffffff',
+				'dark': '#2E4053',
+				'darker': '#212F3C',
+				'success_l': '#FF5733',
+				'nico':'#DD5D5C',
+				'nico2': '#FF914C'
+
 			}
 		},
 

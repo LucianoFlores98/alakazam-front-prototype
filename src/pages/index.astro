@@ -4,13 +4,17 @@ import Layout from '../layouts/Layout.astro';
 import Card_property from '../components/Card_property.astro';
 import NavbarTop from '../components/Navbar_top.astro';
 import NavbarButtom from '../components/Navbar_buttom.astro';
-
+import Filters_bar from '../components/Filters_bar.astro'
 ---
 
 <Layout title="Alakazam">
 	<NavbarTop></NavbarTop>
 	<NavbarButtom></NavbarButtom>
-	<div class="flex flex-wrap w-auto h-auto ml-10 mt-10 ">
+	<main class="flex w-auto h-auto mt-14 bg-light">
+		<div class="w-1/2 h-auto p-3 border-r-1 bg-white">
+			<Filters_bar / >
+		</div>
+		<div class="flex flex-wrap w-auto h-auto">
 			<Card_property></Card_property>
 			<Card_property></Card_property>
 			<Card_property></Card_property>
@@ -20,6 +24,8 @@ import NavbarButtom from '../components/Navbar_buttom.astro';
 			<Card_property></Card_property>
 			<Card_property></Card_property>
 	</div>
+	</main>
+
 	
 </Layout>
 

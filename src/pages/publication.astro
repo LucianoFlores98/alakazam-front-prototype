@@ -1,0 +1,86 @@
+---
+import '../styles.css';
+import NavbarTop from "../components/Navbar_top.astro";
+import Rate from '../components/Rate.astro';
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import '@fontsource/poppins';
+import Carousel from '../components/Carousel.astro'
+---
+
+<Layout title="Profile">
+  <NavbarTop />
+
+  <div class="relative h-screen flex items-center justify-center">
+    <button class="absolute left-0 top-0 text-light px-2 rounded-full ml-5 mt-3 text-5xl z-30 bg-black/40">↶</button>
+    <div class="absolute inset-0 bg-[url('/img/bg-home.png')] bg-cover blur-sm selected" ></div>
+    <main class="w-3/4 h-full flex flex-col bg-white z-10 mt-4 rounded-lg">
+
+      <!--Fotos del inmueble y datos principales -->
+      <header class="flex flex-col">
+        <!--Nombre publicacion -->
+        <div class="flex mt-3 flex-wrap ml-5">
+            <h1 class="text-4xl text-darker">Departamento en Villa Sarita</h1>
+              <p class="text-lgitems-start text-success ml-2 font-bold">Disponible</p>
+        </div>
+
+        <!--Ubicacion y puntuacion -->
+        <div class="flex justify-between">
+          <!--Ubicación -->
+          <div class="flex items-center ml-6 mt-1 w-1/2">
+            <Icon name="pin_drop_24dp" class="w-5 h-5 text-primary_2"/>
+              <p class="text-lg poppins font-semibold italic">
+                1112 Ivanowski, Misiones, Posadas.
+              </p>
+          </div>
+
+          <!--Opiniones -->
+          <div class="flex items-center ml-6 mt-1 w-1/2 justify-end">
+            <!--Stars -->
+            <div class="flex items-center mr-4">
+              <h2 class="text-2xl text-dark leading-normal mr-1">4.0</h2>
+              <!--Stars & cantidad opiniones -->
+                <Rate  />
+                <p class="text-md text-secondary leading-none ml-2">(124)</p>
+            </div>
+          </div>
+
+        </div>
+        <Carousel />
+
+        <!--Carousel -->
+      </header>
+
+      <!--Conoce al Locador -->
+      <section></section>
+      <!--Caracteristicas -->
+      <section></section>
+      <!--Descripcion -->
+      <section></section>
+      <!--Opiniones -->
+      <section></section>
+    </main>
+  
+  </div>
+
+</Layout>
+
+<style>
+
+  .poppins{
+    font-family: 'Poppins', sans-serif;
+    color: #663D3D;
+  }
+
+  .selected::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Filtro oscuro */
+      mix-blend-mode: multiply; /* Para resaltar la imagen */
+      }
+
+</style>

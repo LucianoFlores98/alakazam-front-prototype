@@ -8,7 +8,7 @@ const Dropdown_user = () => {
     <Dropdown
       showArrow
       radius="sm"
-      classNames={{
+      className={{
         base: "before:bg-default-200", // change arrow background
         content: "p-0 border-small border-divider bg-background",
       }}
@@ -16,18 +16,18 @@ const Dropdown_user = () => {
       <DropdownTrigger>
         <button
               type="button"
-              class="inline-flex items-center relative px-1 border rounded-full hover:shadow-lg"
+              className="inline-flex items-center relative px-1 border rounded-full hover:shadow-lg"
             >
-              <div class="pl-1">
+              <div className="pl-1">
                 <PlusIcon className="text-large" />
               </div>
 
-              <div class="block flex-grow-0 flex-shrink-0 h-10 w-12 pl-4 py-1">
-                <div class="rounded-full h-full w-full">
+              <div className="block flex-grow-0 flex-shrink-0 h-10 w-12 pl-4 py-1">
+                <div className="rounded-full h-full w-full">
                   <img
                     src="/img/profile.png"
                     alt="Mariano"
-                    class="rounded-full h-full w-full"
+                    className="rounded-full h-full w-full"
                   />
                 </div>
               </div>
@@ -61,7 +61,7 @@ const Dropdown_user = () => {
             <User
               name="Marianela Atorranta"
               description="@marybb69"
-              classNames={{
+              className={{
                 name: "text-default-600",
                 description: "text-default-500",
               }}

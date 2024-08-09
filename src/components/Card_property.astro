@@ -3,16 +3,34 @@ import { Icon } from "astro-icon/components"
 import FavButton from "./Fav_button.astro"
 import { Divider } from "@nextui-org/react";
 
+interface Props {
+	title: string;
+	location: string;
+	image: string;
+  price: string;
+  inmobiliaria:string;
+}
+
+const { title, location, image, price, inmobiliaria } = Astro.props;
+
 ---    
-    
-    <div class="relative mx-2 w-96 min-w-96 mt-4 text-darker">
-      <a href="#" class="relative inline-block w-full">
+    <!-- Card Container -->
+    <div class="relative mx-2 w-96 min-w-96 mb-2 text-darker">
+      <!-- Linkeable -->
+      <a href="/publication" class="relative inline-block w-full">
+        <!-- Card content container-->
         <div class="shadow-xl border rounded-lg bg-white">
-          <div class="flex justify-center relative rounded-lg overflow-hidden h-52">
+
+          <!--Header Card -->
+          <header class="flex justify-center relative rounded-lg overflow-hidden h-52">
+
+            <!--Carousel Images -->
             <div class="transition-transform duration-700 transform ease-in-out hover:scale-105 w-full">
-              <div class="absolute inset-0 bg-[url('/img/departamento.jpg')] bg-cover"></div>
+              <div class='absolute inset-0 bg-cover' style={`background-image: url(${image});`}
+              ></div>
             </div>
   
+            <!-- Caracteristicas principales -->
             <div class="absolute flex justify-center bottom-0 mb-3">
               <div class="flex bg-white px-4 py-1 space-x-5 rounded-lg overflow-hidden shadow">
                 <p class="flex items-center font-medium text-darker">
@@ -32,46 +50,65 @@ import { Divider } from "@nextui-org/react";
               </div>
             </div>
   
+            <!-- Badge -->
             <span class="absolute top-0 left-0 inline-flex mt-3 ml-3 px-3 py-2 rounded-lg z-10 bg-darker text-sm font-medium text-light select-none">
                 Recomendado
             </span>
+
+            <!-- Fav button -->
             <span class="absolute top-0 right-0 inline-flex mt-1 ml-1 px-3 py-2 rounded-lg z-10 text-sm font-medium text-light select-none">
-                <FavButton>
-              </span>
-          </div>
+              <FavButton>
+            </span>
+
+          </header>
   
-          <div class="px-2 pb-2">
-            <div class="mt-2">
+          <!-- Card Main content -->
+          <main class="px-2 pb-2">
+
+            <!-- Header Main content -->
+            <header class="mt-2">
+              <!--Ubicación -->
               <h2 class="font-medium text-lg md:text-xl text-darker line-clamp-1 ml-2" title="New York">
-                Casa en Villa Sarita
+                {title}
               </h2>
+
               <div class="flex items-center ml-2">
-                <Icon name="pin_drop_24dp" class="w-5 h-6"/>
+                <Icon name="pin_drop_24dp" class="w-5 h-5 text-primary_2"/>
                 <p title="New York, NY 10004, United States" class="text-md text-darker line-clamp-1">
-                  Felix Aguirre 1519, Posadas.
+                  {location}
                 </p>
               </div>
-            </div>
-    
-            <div class="grid grid-cols-2 grid-rows-2 gap-1 mt-5 ml-2">
+
+            </header>
+
+            <!--Caracteristicas principales -->
+            <main class="grid grid-cols-2 grid-rows-2 gap-1 mt-5 ml-2">
+
+              <!-- Caracteristica 1 -->
               <div class="flex flex-nowrap items-center">
                 <Icon name="home_24dp" class="w-7 h-7 mr-1"/>
                 <p class="line-clamp-1 text-sm">
                   Casa
                 </p>
               </div>
+
+              <!-- Caracteristica 2 -->
               <div class="flex flex-nowrap items-center">
                 <Icon name="contract_dp40" class="w-7 h-7 mr-1"/>
                 <p class="line-clamp-1 text-sm">
                   Contrato anual
                 </p>
               </div>
+
+              <!-- Caracteristica 3 -->
               <div class="flex flex-nowrap items-center">
                 <Icon name="pets_24dp" class="w-6 h-6 mr-1"/>
                 <p class="line-clamp-1 text-sm">
                   Mascotas
                 </p>
               </div>
+
+              <!-- Caracteristica 4 -->
               <div class="flex flex-nowrap items-center">
                 <Icon name="request_page_24dp" class="w-7 h-7 mr-1"/>
                 <p class="line-clamp-1 text-sm">
@@ -79,40 +116,61 @@ import { Divider } from "@nextui-org/react";
                 </p>
               </div>
 
-            </div>
+            </main>
 
+            <!--Footer Card container -->
+            <a href="#" class="relative inline-block w-full">
+            <footer class="grid grid-cols-2 mt-5 h-13">
+              <!--Linkeable -->
+                <!-- Inmobiliaria Container-->
+                <div class="flex flex-col">
+                  <!-- Logo y verificacion Container -->
+                  <div class="relative flex items-center">
 
-            <div class="grid grid-cols-2 mt-5 h-13">
-              <div class="flex flex-col">
-                <div class="relative flex items-center">
-                  <img src="/img/inmobiliaria.jpg" alt="inmo" class="rounded-full w-6 h-6 cover md:w-8 md:h-8"/>
-                  <div class="flex items-center text-info">
-                    <Icon name="verified_24dp" class="text-md mr-px"/>
-                    <p class="text-xs">Perfil Verificado</p>
-                    <span class="flex items-center">
-                    </span>
+                    <!--Logo -->
+                    <img src="/img/inmobiliaria.jpg" alt="inmo" class="rounded-full w-6 h-6 cover md:w-8 md:h-8"/>
+
+                    <!--Verificación Perfil -->
+                    <div class="flex items-center text-info">
+                      <Icon name="verified_24dp" class="text-md mr-px"/>
+                      <p class="text-xs">Perfil Verificado</p>
+                      <span class="flex items-center">
+                      </span>
+                    </div>
+
                   </div>
+
+                  <Divider className=" mx-auto bg-gradient-to-r from-light via-dark/50 to-light" />
+
+                  <!--Nombre Locatario -->
+                  <p class="ml-2 text-darker line-clamp-1 text-wrap mt-1 text-xs">
+                    {inmobiliaria}
+                  </p>
+
                 </div>
 
-                <Divider className=" mx-auto bg-gradient-to-r from-light via-dark/50 to-light" />
+                <!-- Precio Container -->
+                <div class="flex items-center justify-center">
 
-                <p class="ml-2 text-darker line-clamp-1 text-wrap mt-1 text-xs">
-                  FS servicios inmobiliarios
-                </p>
+                  <!--Precio -->
+                  <div class="inline-block font-semibold text-primary_2 whitespace-nowrap leading-tight rounded-xl">
+                    <span class="text-xl uppercase">
+                      $
+                    </span>
+                    <span class="text-xl text-primary_2">{price}</span>/m
+                  </div>
 
-              </div>
-
-              <div class="flex items-center justify-center">
-
-                <div class="inline-block font-semibold text-primary_2 whitespace-nowrap leading-tight rounded-xl">
-                  <span class="text-xl uppercase">
-                    $
-                  </span>
-                  <span class="text-xl text-primary_2">1.000.000</span>/m
                 </div>
-              </div>
-            </div>
-          </div>
+
+                <!--Fin Linkeable -->
+              </footer>
+            </a>
+            <!--Fin Footer Card -->
+          </main>
+          <!--Fin Main content -->
         </div>
+        <!--Fin Card content container -->
       </a>
+      <!-- Fin linkeable -->
     </div>
+    <!--Fin Container -->

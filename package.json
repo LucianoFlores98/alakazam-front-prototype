@@ -10,8 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^3.5.0",
+    "@astrojs/react": "^3.6.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource/poppins": "^5.0.14",
     "@iconify/utils": "^2.1.25",
     "@nextui-org/divider": "^2.0.28",
     "@nextui-org/dropdown": "^2.1.26",
@@ -20,7 +21,7 @@
     "@nextui-org/react": "^2.4.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "astro": "^4.10.2",
+    "astro": "^3.0.13",
     "astro-icon": "^1.1.0",
     "framer-motion": "^11.2.10",
     "react": "^18.3.1",

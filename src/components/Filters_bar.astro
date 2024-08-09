@@ -3,15 +3,16 @@ import Checkbox_filters from '../components/react/Checkbox_filters'
 import {Slider} from "@nextui-org/react";
 
 ---
-
-<Checkbox_filters  client:visible/>
-<Slider 
-label="Rango de precios"
-      step={50} 
-      minValue={30000} 
-      maxValue={1000000} 
-      defaultValue={[100000, 500000]} 
-      formatOptions={{style: "currency", currency: "ARS"}}
-      className="max-w mt-4"
-      client:visible
-/>
+<div class="pl-4">
+      <Checkbox_filters  client:load/>
+      <Slider 
+      label="Rango de precios"
+            step={50} 
+            minValue={30000} 
+            maxValue={2000000} 
+            defaultValue={[100000, 500000]} 
+            formatOptions={{style: "currency", currency: "ARS"}}
+            className="w-11/12 mt-4"
+            client:load
+      />
+</div>

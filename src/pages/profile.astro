@@ -1,0 +1,41 @@
+---
+import '../styles.css';
+import NavbarTop from "../components/Navbar_top.astro";
+import ProfileRating from '../components/ProfileRating.astro';
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="Profile">
+  <NavbarTop />
+
+  <main class="flex w-auto h-auto bg-light flex-col">
+    
+    <header class="flex justify-center relative rounded-lg h-72">
+      <div class="absolute inset-0 bg-[url('/img/departamento.jpg')] bg-cover"></div>
+
+    </header>
+    
+    <main>
+      <div class="flex mt-3 flex-wrap">
+        <div class="flex ml-4 items-start">
+          <img src="/img/inmobiliaria.jpg" alt="Inmobiliaria" class="rounded-md w-48 h-48 cover ring ring-darker">
+          <h1 class="text-4xl ml-3">FS Servicios Inmobiliarios</h1>
+          <!--Verificación Perfil -->
+          <div class="flex items-center text-info mt-2 ml-2">
+            <Icon name="verified_24dp" class="text-xl"/>
+            <p class="text-lg">Perfil Verificado</p>
+          </div>
+        </div>
+
+        <div class="ml-10">
+          <ProfileRating />
+        </div>
+
+      </div>
+
+    </main>
+  </main>
+
+</Layout>
+

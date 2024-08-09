@@ -1,7 +1,7 @@
 import React from "react";
 import {CheckboxGroup, Checkbox} from "@nextui-org/react";
 
-export default function App() {
+const Checkbox_filter = ()=> {
   const [selected, setSelected] = React.useState([]);
 
   return (
@@ -35,3 +35,4 @@ export default function App() {
     </div>
   );
 }
+export default Checkbox_filter

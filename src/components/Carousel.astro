@@ -1,0 +1,53 @@
+<div class="relative flex items-center justify-center h-96 w-full ">
+  <button class="absolute left-0 text-light p-2 rounded-full ml-4 text-6xl bg-black/40 ">&lt;</button>
+  <img src="/img/DepartamentoMuestra/1.jpg" alt="Imagen Principal" class="object-cover h-full w-full">
+  <button class="absolute right-0 text-light p-2 rounded-full mr-4 text-6xl bg-black/40">&gt;</button>
+</div>
+  <div class="flex items-center justify-center bg-black/90 py-2">
+    <button class="text-light p-2 rounded-full mx-2">&lt;</button>
+    <div class="flex space-x-2 ">
+      <div class="w-20 h-20 bg-dark flex items-center justify-center relative selected">
+        <img src="/img/DepartamentoMuestra/1.jpg" alt="Imagen 1" class="object-cover h-full ">
+      </div>
+      <div class="w-20 h-20 bg-white flex items-center justify-center">
+        <img src="/img/DepartamentoMuestra/2.jpg" alt="Imagen 1" class="object-cover h-full">
+      </div>
+      <div class="w-20 h-20 bg-white flex items-center justify-center">
+        <img src="/img/DepartamentoMuestra/3.jpg" alt="Imagen 2" class="object-cover h-full">
+      </div>
+      <div class="w-20 h-20 bg-white flex items-center justify-center">
+        <img src="/img/DepartamentoMuestra/4.jpg" alt="Imagen 3" class="object-cover h-full">
+      </div>
+      <div class="w-20 h-20 bg-white flex items-center justify-center">
+        <img src="/img/DepartamentoMuestra/5.jpg" alt="Imagen 4" class="object-cover h-full">
+      </div>
+      <div class="w-20 h-20 bg-white flex items-center justify-center">
+        <img src="/img/DepartamentoMuestra/6.jpg" alt="Imagen 5" class="object-cover h-full">
+      </div>
+      <div class="w-20 h-20 bg-white flex items-center justify-center">
+        <img src="/img/DepartamentoMuestra/7.jpg" alt="Imagen 5" class="object-cover h-full w-full">
+      </div>
+      <div class="w-20 h-20 bg-white flex items-center justify-center">
+        <img src="/img/DepartamentoMuestra/8.jpg" alt="Imagen 5" class="object-cover h-full">
+      </div>
+      <div class="w-20 h-20 bg-white flex items-center justify-center">
+        <img src="/img/DepartamentoMuestra/9.jpg" alt="Imagen 5" class="object-cover h-full">
+      </div>
+    </div>
+    <button class=" text-light p-2 rounded-full mx-2">&gt;</button>
+  </div>
+
+<style>
+
+      .selected::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Filtro oscuro */
+      mix-blend-mode: multiply; /* Para resaltar la imagen */
+      }
+
+</style>
